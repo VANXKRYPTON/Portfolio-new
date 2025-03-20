@@ -22,6 +22,10 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#projects">Projects</a>
+            <a href="#internships">Internships</a>
             <a href="#testimonial">Testimonial</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -120,7 +124,63 @@
         </h2>
     </section>
 
+
+    <!--Certificates Section Between Facts and Skills-->
+    <section class="internship" id="internships">
+        <h2 class="heading">Internship & Project Certificates</h2>
+        <div class="certificates-container">
+            <div class="certificate-box">
+                <img src="assets/participation certificate.jpg" alt="Participation Certificate">
+                <p>Participation Certificate</p>
+            </div>
+            <div class="certificate-box">
+                <img src="assets/project completion.jpg" alt="Project Completion Certificate">
+                <p>Project Completion Certificate</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Projects Section-->
+    <section class="projects" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="projects-container">
+            <div class="project-box">
+                <img src="assets/Project1.jpg" alt="Project 1">
+                <img src="assets/Project1_2.jpg" alt="Project 1 - Additional View">
+                <img src="assets/Project1_3.jpg" alt="Project 1 - Additional View">
+                <img src="assets/Project1_4.jpg" alt="Project 1 - Additional View">
+                <h3>Predicting Morality of Heart Failure Patients"</h3>
+                <p>This project leverages machine learning techniques to predict the mortality risk of patients suffering from heart failure. By analyzing clinical data such as age, blood pressure, ejection fraction, and other vital parameters, the model
+                    provides insights into patient outcomes. The project utilizes data preprocessing, feature selection, and various classification algorithms to enhance prediction accuracy. The findings aim to assist healthcare professionals in early
+                    risk assessment and improved patient care. Technologies Used: Python, Scikit-Learn, Pandas, NumPy, Matplotlib, Machine Learning Algorithms
+
+                </p>
+                <a href="https://drive.google.com/drive/folders/19GjjaZsL-aVIMi2LO0sqPEEJHn94CuNF?usp=sharing" class="btn">View Project</a>
+            </div>
+            <div class="project-box">
+                <img src="assets/project2.jpg" alt="Project 2">
+                <img src="assets/project2_1.jpg" alt="Project 2 - Additional View">
+                <img src="assets/project2_2.jpg" alt="Project 2 - Additional View">
+                <img src="assets/project2_3.jpg" alt="Project 2 - Additional View">
+                <h3>Hate Speech Detection</h3>
+                <p>Overview: Hate speech detection is a crucial application of Natural Language Processing (NLP) and machine learning. This project aims to classify text as either hate speech or non-hate speech using machine learning models. By leveraging
+                    techniques such as text preprocessing, feature extraction, and classification algorithms, the project helps in identifying and mitigating harmful content on online platforms. Key Features: Data Preprocessing: Cleaning and transforming
+                    raw text data by removing stop words, punctuation, and performing tokenization. Feature Engineering: Implementing TF-IDF (Term Frequency-Inverse Document Frequency) or word embeddings to convert text into numerical representations.
+                    Machine Learning Models: Training classifiers such as Logistic Regression, Naïve Bayes, Support Vector Machines (SVM), or deep learning models like LSTMs and BERT for improved accuracy. Evaluation Metrics: Using precision, recall,
+                    F1-score, and confusion matrix to assess model performance. Deployment (Optional): Implementing the model into a web application or API for real-time hate speech detection. Applications: Social media platforms for content moderation.
+                    Online communities to prevent cyberbullying. Law enforcement agencies to track and analyze hate speech trends.</p>
+                <a href="https://drive.google.com/file/d/1kPvGuhUkoT9iVH5fggfv2TBhfgAHorCk/view?usp=sharing" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
     <!--Skills Section-->
+
 
     <section class="skills" id="skills">
         <h2 class="Skills">
@@ -223,6 +283,7 @@
         </h2>
     </section>
 
+
     <!--Certificates-->
 
     <section class="certificates" id="certificates">
@@ -234,6 +295,34 @@
             </div>
         </h2>
     </section>
+
+    <!--Certificates Section Between Skills and My Services-->
+    <section class="certificates" id="certificates">
+        <h2 class="My Certificates">
+            <div class="container">
+                <h1>My Certificates</h1>
+                <div class="certificates-container">
+                    <div class="certificate-box">
+                        <img src="assets/coursera.jpg" alt="Coursera">
+                    </div>
+                    <div class="certificate-box">
+                        <img src="assets/data science.jpg" alt="Data Science">
+                    </div>
+                    <div class="certificate-box">
+                        <img src="assets/ibm.jpg" alt="IBM">
+                    </div>
+                    <div class="certificate-box">
+                        <img src="assets/iot.jpg" alt="IOT">
+                    </div>
+                </div>
+            </div>
+        </h2>
+    </section>
+
+
+
+
+
 
     <!--SERVICES SECTION CODE-->
 
@@ -326,21 +415,21 @@
     <!--Contact Section Code-->
 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact<span>Me</span></h2>
-
-        <form action="#">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="send_message.php" method="POST">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" name="Email" placeholder="Email Address">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="subject" placeholder="Email Subject" required>
             </div>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
+
 
     <!--Footer Section Code-->
 
