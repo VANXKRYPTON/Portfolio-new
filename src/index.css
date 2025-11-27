@@ -1,0 +1,514 @@
+@import "tailwindcss";
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    background: #0a0a0a;
+    color: #f3f4f6;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.animate-blink {
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(250%);
+    }
+}
+
+.animate-loading-bar {
+    animation: loading 0.8s ease infinite;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills-section {
+    background: #101018;
+    padding: 2rem 0;
+}
+
+.skills-title {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.accent-color {
+    color: #b093fe;
+    font-weight: 700;
+}
+
+.skills-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skills-category-card {
+    background: #191927;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    min-width: 320px;
+    box-shadow: 0 6px 32px 0 rgba(86, 79, 107, 0.3);
+}
+
+.skills-category-title {
+    color: #c5b7fa;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-card {
+    background: #13132b;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.skill-name {
+    flex: 1;
+}
+
+.progress-bar {
+    flex: 2;
+    height: 8px;
+    background: #22213c;
+    border-radius: 5px;
+    margin: 0 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.percentage {
+    min-width: 35px;
+    color: #c5b7fa;
+    font-weight: 600;
+    text-align: right;
+    font-size: 1rem;
+}
+
+.certificates-section {
+    background: #181825;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+/* Heading Accent */
+
+.accent-color {
+    color: #a78bfa;
+}
+
+
+/* Card Grid */
+
+.certificates-section .flex {
+    flex-wrap: wrap;
+    gap: 2.4rem;
+    justify-content: center;
+}
+
+
+/* Certificate Card Styles */
+
+.certificate-card {
+    background: #0e1122;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 38px #535cf122, 0 0 22px #a78bfa33;
+    overflow: hidden;
+    transition: transform 0.15s cubic-bezier(.38, .58, .47, 1.37), box-shadow 0.18s;
+    min-width: 320px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate-card:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 16px 32px #8b5cf6a5, 0 0 32px #a78bfa99;
+}
+
+.certificate-card h3 {
+    font-weight: 700;
+    font-size: 1.55rem;
+    margin-bottom: 0.3rem;
+    color: #fff;
+    text-shadow: 0 0 14px #8b5cf644;
+}
+
+.certificate-card .text-md {
+    font-size: 1.08rem;
+    color: #a78bfa;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-card a {
+    color: #d4d6fa;
+    font-weight: 500;
+    font-size: 1.04rem;
+    text-decoration: underline;
+    transition: color 0.18s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.certificate-card a:hover {
+    color: #a78bfa;
+}
+
+
+/* Certificate Image */
+
+.certificate-card .w-full {
+    width: 100%;
+}
+
+.certificate-card .h-52,
+.certificate-card .md\:h-56 {
+    min-height: 195px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Details Container */
+
+.certificate-card .py-6 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.certificate-card .px-6 {
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+}
+
+.certificate-card .bg-\[\#11132a\] {
+    background: #11132a;
+}
+
+
+/* Button at the bottom */
+
+.certificates-section .w-full a {
+    background: #a78bfa;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 2.5rem;
+    font-size: 1.25rem;
+    box-shadow: 0 0 22px #a78bfa55;
+    padding: 0.9rem 2.6rem;
+    margin-top: 2.2rem;
+    transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    text-decoration: none;
+}
+
+.certificates-section .w-full a:hover {
+    background: #8b5cf6;
+    color: #fff;
+    box-shadow: 0 0 34px #a78bfa99;
+}
+
+
+/* Main Heading and Paragraph */
+
+.certificates-section h2 {
+    color: #fff;
+    font-size: 2.55rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 12px #8b5cf644;
+}
+
+.certificates-section p {
+    text-align: center;
+    font-size: 1.17rem;
+    color: #e1e1ef;
+    max-width: 780px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.85rem;
+    letter-spacing: 0.2px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 920px) {
+    .certificates-section .flex {
+        flex-direction: column !important;
+        gap: 2.2rem !important;
+    }
+    .certificate-card {
+        max-width: 96vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .certificates-section h2 {
+        font-size: 1.38rem;
+        padding-top: 0.7rem;
+    }
+    .certificate-card h3 {
+        font-size: 1.1rem;
+    }
+    .certificates-section p {
+        font-size: 0.97rem;
+        line-height: 1.3rem;
+    }
+}
+
+
+/* Contact Section Layout */
+
+#contact {
+    background: #111117;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+/* Text Headings */
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(90deg, #43a8ff 40%, #a78bfa 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#contact h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    text-align: center;
+}
+
+
+/* Section Description */
+
+#contact p {
+    color: #b6b6cc;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    margin-bottom: 0.4rem;
+}
+
+.contact-info {
+    color: #e3e2fa;
+    font-size: 1.08rem;
+    margin-top: 0.7rem;
+}
+
+.contact-info strong {
+    color: #cfcfff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-info .flex {
+    gap: 0.9rem;
+}
+
+
+/* Left Side Icons */
+
+.contact-info [class*="rounded-full"] {
+    background: #232247;
+    color: #a78bfa;
+    box-shadow: 0 0 6px #a78bfa33;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Social Icon Row */
+
+.social-row {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.social-row span {
+    color: #b5b2fc;
+    font-size: 1.08rem;
+}
+
+.social-row a {
+    color: #c5c5e6;
+    transition: color 0.18s cubic-bezier(.38, .58, .47, 1.37);
+}
+
+.social-row a:hover {
+    color: #a78bfa !important;
+}
+
+
+/* Contact Form Card */
+
+.contact-form-card {
+    background: #181826;
+    border-radius: 2rem;
+    box-shadow: 0 16px 44px #22224a99, 0 0 22px #8b5cf699;
+    padding: 2.2rem 1.2rem;
+    margin: 0 auto;
+}
+
+.contact-form-card h3 {
+    color: #e5e5ff;
+    margin-bottom: 1.2rem;
+}
+
+
+/* Form Inputs */
+
+.contact-form-card input,
+.contact-form-card textarea {
+    width: 100%;
+    background: #15151e;
+    border: 1.6px solid #433c52;
+    border-radius: 1.1rem;
+    padding: 1rem 1.2rem;
+    color: #f5f8ff;
+    font-size: 1.18rem;
+    margin-bottom: 1.1rem;
+    outline: none;
+    transition: border 0.18s, background 0.18s, box-shadow 0.18s;
+    box-shadow: 0 0 6px #3b82f633;
+}
+
+.contact-form-card input::placeholder,
+.contact-form-card textarea::placeholder {
+    color: #8f93b2;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+    border-color: #a78bfa;
+    background: #232247;
+}
+
+
+/* Send Button */
+
+.contact-form-card button {
+    width: 100%;
+    background: #a78bfa;
+    color: #fff;
+    font-size: 1.22rem;
+    font-weight: 600;
+    border-radius: 1.5rem;
+    border: none;
+    padding: 1.1rem 0;
+    margin-top: 0.5rem;
+    box-shadow: 0 0 18px #a78bfa77;
+    transition: background 0.18s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+}
+
+.contact-form-card button:hover {
+    background: #6c41c7;
+    box-shadow: 0 0 36px #a78bfa99, 0 0 12px #8b5cf6bb;
+    color: #fff !important;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1020px) {
+    #contact .max-w-5xl {
+        flex-direction: column !important;
+        gap: 2.5rem;
+    }
+    .contact-form-card {
+        max-width: 95vw !important;
+        margin-top: 2.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #contact h2 {
+        font-size: 1.17rem;
+        margin-bottom: 0.5rem;
+    }
+    .contact-form-card h3 {
+        font-size: 1.17rem;
+        margin-bottom: 0.8rem;
+    }
+    .contact-form-card button {
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+}
